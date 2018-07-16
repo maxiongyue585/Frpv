@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
     void initViews() {
         mActionBar = getSupportActionBar();
         if (mActionBar != null) {
-
 //            mActionBar.setDisplayHomeAsUpEnabled(true);
 //            mActionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white);
             mActionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM); //Enable自定义的View
