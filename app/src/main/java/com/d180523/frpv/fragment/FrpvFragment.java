@@ -135,6 +135,11 @@ public class FrpvFragment extends Fragment implements DataContract.View, PullLoa
                     startActivity(new Intent(mContext, IniDetailsActivity_.class).putExtra(INI_FILENAME_PARMS, frpcBean.getName()));
                 }
             }
+
+            @Override
+            public void delClick(FrpcBean frpcBean) {//侧滑删除
+
+            }
         });
 
     }

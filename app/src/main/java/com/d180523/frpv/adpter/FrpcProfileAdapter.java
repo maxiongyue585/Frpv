@@ -76,11 +76,19 @@ public class FrpcProfileAdapter extends RecyclerView.Adapter<FrpcProfileAdapter.
                 }
             });
         } else {
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
+            holder.item_name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (itemClickListener != null) {
                         itemClickListener.onItemClick(item);
+                    }
+                }
+            });
+            holder.item_del.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (itemClickListener != null) {
+                        itemClickListener.delClick(item);
                     }
                 }
             });
@@ -98,17 +106,21 @@ public class FrpcProfileAdapter extends RecyclerView.Adapter<FrpcProfileAdapter.
         TextView item_name;
         TextView item_note;
         TextView item_exist;
+        TextView item_del;
 
         public MyViewHolder(final View itemView) {
             super(itemView);
             item_name = itemView.findViewById(R.id.item_name);
             item_note = itemView.findViewById(R.id.item_note);
             item_exist = itemView.findViewById(R.id.item_exist);
+            item_del = itemView.findViewById(R.id.tv_del);
         }
     }
 
     //点击事件监听
     public interface ItemClickListener {
         void onItemClick(FrpcBean frpcBean);
+
+        void delClick(FrpcBean frpcBean);
     }
 }

@@ -22,4 +22,6 @@
     <!--Pullrecyclview-->
     <string name="load_more_text">正在加载...</string>
     <string name="no_file">本地为空</string>
+
+    <string name="del">删除</string>
 </resources>
